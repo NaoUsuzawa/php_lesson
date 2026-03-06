@@ -16,14 +16,10 @@ echo '現在時刻は、' . date('Y-m-d H:i:s') . 'です。';
 // Q4 条件分岐-1 if文
 $device = 'abcde';
 
-if ($device === 'windows'){
-  echo '使用OSは、windowsです。';
+if ($device === 'windows' || $device === 'mac'){
+  echo "使用OSは、{$device}です。";
 }else{
-  if ($device === 'mac'){
-    echo '使用OSは、macです。';
-  }else{
     echo 'どちらでもありません。';
-  }
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -36,7 +32,7 @@ $kanto = ['東京都', '茨城県', '栃木県', '千葉県', '群馬県', '埼�
 echo $kanto[2] . 'と' . $kanto[3] . 'は関東地方の都道府県です。';
 
 // Q7 連想配列-1
-$kanto = ['東京都' => '新宿区', '神奈川県' => '横浜市', '千葉県' => '千葉市', '埼玉県' => 'さいたま市', '栃木県' => '宇都宮市', '群馬県' => '前橋市', '茨城県' =>'水戸市'];
+$kanto = ['東京都' => '新宿区', '神奈川県' => '横浜市', '千葉県' => '千葉市', '埼玉県' => 'さいたま市', '栃木県' => '宇都宮市', '群馬県' => '前橋市', '茨城県' =>'水戸市', '大阪府' => '大阪市', '愛知県' => '名古屋市'];
 
 foreach ($kanto as $capital) {
   echo $capital . "\n";
@@ -50,14 +46,12 @@ foreach ($kanto as $prefecture => $capital){
 }
 
 // Q9 連想配列-3
-$kanto = ['東京都' => '新宿区', '神奈川県' => '横浜市', '千葉県' => '千葉市', '埼玉県' => 'さいたま市', '栃木県' => '宇都宮市', '群馬県' => '前橋市', '茨城県' =>'水戸市', '大阪府' => '大阪市', '愛知県' => '名古屋市'];
-
 $kanto_area = ['東京都', '神奈川県', '千葉県', '埼玉県', '栃木県', '群馬県', '茨城県'];
 
-foreach ($kanto as $prefecture => $capital){
-  if (in_array($prefecture, $kanto_area)){
+foreach ($kanto as $prefecture => $capital) {
+  if (in_array($prefecture, $kanto_area)) {
     echo $prefecture . "の県庁所在地は、" . $capital . "です。\n";
-  }else{
+  } else {
     echo $prefecture . "は関東地方ではありません。\n";
   }
 }
@@ -83,7 +77,7 @@ echo $price . 'の商品の税込価格は' . $taxInPrice . '円です。';
 function distinguishNum($num)
 {
   if ($num % 2 === 0){
-  return $num . 'は偶数です。';
+    return $num . 'は偶数です。';
   }else{
     return $num . 'は奇数です。';
   }
@@ -109,7 +103,7 @@ function evaluateGrade($level)
       break;
 
     default:
-    echo '判定不明です。講師に問い合わせください。';
+    return '判定不明です。講師に問い合わせください。';
     break;
 
   }

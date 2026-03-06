@@ -3,7 +3,7 @@
 // Q1 tic-tac問題
 for ($i = 1; $i <= 100; $i++) {
   if ($i % 4 === 0 && $i % 5 === 0) {
-    echo "tic_tac\n";
+    echo "tic-tac\n";
   } elseif ($i % 4 === 0) {
     echo "tic\n";
   } elseif ($i % 5 === 0) {
@@ -85,7 +85,7 @@ echo $date->format('Y-m-d');
 // 問題２
 $today = new DateTime();
 $birthday = new DateTime('1992-04-25');
-$diff = $today ->diff($birthday);
+$diff = $today -> diff($birthday);
 echo "あの日から{$diff->days}日経過しました。";
 
 ?>
