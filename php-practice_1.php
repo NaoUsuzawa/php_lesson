@@ -46,7 +46,8 @@ foreach ($kanto as $prefecture => $capital) {
 }
 
 // Q9 連想配列-3
-$kanto[] = ['大阪府' => '大阪市', '愛知県' => '名古屋市'];
+$kanto['大阪府'] = '大阪府';
+$kanto['愛知県'] = '名古屋市';
 $kanto_area = ['東京都', '神奈川県', '千葉県', '埼玉県', '栃木県', '群馬県', '茨城県'];
 
 foreach ($kanto as $prefecture => $capital) {
@@ -106,7 +107,6 @@ function evaluateGrade($level)
     default:
       return '判定不明です。講師に問い合わせください。';
       break;
-
   }
 }
 
