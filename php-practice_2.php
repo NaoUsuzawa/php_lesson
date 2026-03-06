@@ -16,10 +16,10 @@ for ($i = 1; $i <= 100; $i++) {
 // Q2 多次元連想配列
 $personalInfos = [
     [
-        'name' => 'Aさん',
-        'mail' => 'aaa@mail.com',
-        'tel' => '09011112222'
-      ],
+      'name' => 'Aさん',
+      'mail' => 'aaa@mail.com',
+      'tel' => '09011112222'
+    ],
     [
       'name' => 'Bさん',
       'mail' => 'bbb@mail.com',
